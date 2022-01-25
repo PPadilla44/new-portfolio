@@ -4,7 +4,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "main": "#01847F",
+        "light": "#FFFEF9",
+        "dark": "#11021F",
+      },
+      fontFamily: {
+        artifika: ['Artifika']
+    }
   },
+},
   plugins: [],
 }

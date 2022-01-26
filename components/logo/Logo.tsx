@@ -2,7 +2,7 @@ import React from 'react';
 
 const Logo = () => {
     return (
-        <svg width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="100" height="100" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_27_32)">
                 <circle cx="54" cy="50" r="50" fill="#01847F" />
             </g>

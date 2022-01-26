@@ -7,7 +7,7 @@ export const Nav = () => {
         <nav className='h-16 w-full bg-light absolute left-0 top-0 flex justify-center z-50'>
             <div className="w-[1200px] flex justify-between item">
                 <div className='mt-5'>
-                    <Link href={"/"} scroll={false}>
+                    <Link href={"/"} scroll={false} passHref>
                         <button>
                             <Logo />
                         </button>
@@ -16,7 +16,7 @@ export const Nav = () => {
 
                 <div className='flex items-center gap-24 text-xl'>
                     <button>
-                        <Link href={"/aboutme"} scroll={false}>
+                        <Link href={"/aboutme"} scroll={false} passHref>
                             <h3>About Me</h3>
                         </Link>
                     </button>

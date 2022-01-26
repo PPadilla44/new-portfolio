@@ -8,26 +8,21 @@ import anime from "../public/assets/images/anime.jpg";
 
 const AboutMe: NextPage = () => {
 
+
     return (
-        <div className="h-screen w-screen flex justify-center items-center relative bg-main">
-            <RotatingImage
-                xRange={100}
-                yRange={300}
-                size={150}
-                xTime={20}
-                yTime={25} 
-                src={anime}
-                />
-            <RotatingImage
-                xRange={400}
-                yRange={100}
-                size={150}
-                xTime={16}
-                yTime={20} 
-                src={me}
-                />
+        <div className="h-screen w-screen flex justify-center items-center relativ">
+
             <div className='w-[1200px] flex flex-col justify-center items-center'>
 
+                <RotatingImage
+                    xRange={["50%", "100%", "50%", "0%", "75%", "50%"]}
+                    yRange={["50%", "25%", "100%", "75%", "100%", "50%"]}
+                    size={150}
+                    time={15}
+                    rotateRange={[0, 145, 35, 0]}
+                    src={anime}
+                    className={`h-[300px] w-[300px] left-10 cursor-pointer`}
+                />
 
                 <div className='drop-shadow-3xl'>
                     <Image className='rounded-lg' src={me} alt="imgers" width={"300px"} height={"300px"} objectFit='cover' />
@@ -39,6 +34,8 @@ const AboutMe: NextPage = () => {
                     Velit nullam viverra erat eget lacus, diam. Orci urna sed leo etiam nibh etiam.
                     Semper sed quis dui enim quisque ac varius venenatis bibendum.
                 </h3>
+
+                
             </div>
         </div>
     )

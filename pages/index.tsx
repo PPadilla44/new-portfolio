@@ -1,12 +1,8 @@
 import type { NextPage } from 'next'
-import { motion } from "framer-motion";
-import { useEffect, useState } from 'react';
-import { Nav } from '../components/nav/Nav';
+import { useState } from 'react';
 
 
 const Home: NextPage = () => {
-
-  const [played, setPlayed] = useState(false);
 
 
   return (

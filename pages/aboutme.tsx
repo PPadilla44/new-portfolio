@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Image from 'next/image';
-import { Nav } from '../components/nav/Nav';
 import RotatingImage from '../components/rotating-images/RotatingImage';
 import me from "../public/assets/images/ME.jpg";
 import anime from "../public/assets/images/anime.jpg";

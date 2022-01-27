@@ -1,8 +1,8 @@
 import type { NextPage } from 'next'
 import Image from 'next/image';
 import RotatingImage from '../components/rotating-images/RotatingImage';
-import me from "../public/assets/images/ME.jpg";
-import anime from "../public/assets/images/anime.jpg";
+import me from "../public/assets/pictures/ME.jpg";
+import anime from "../public/assets/pictures/anime.jpg";
 
 
 const AboutMe: NextPage = () => {

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import RotatingImage from '../components/rotating-images/RotatingImage';
 import me from "../public/assets/pictures/ME.jpg";
 import anime from "../public/assets/pictures/anime.jpg";
+import Description from '../components/aboutme/Description';
 
 
 const AboutMe: NextPage = () => {
@@ -11,7 +12,9 @@ const AboutMe: NextPage = () => {
     return (
         <div className="h-screen w-screen flex justify-center items-center relativ">
 
-            <div className='w-[1200px] flex flex-col justify-center items-center'>
+            <Description />
+
+            {/* <div className='w-[1200px] flex flex-col justify-center items-center'>
 
                 <RotatingImage
                     xRange={["50%", "100%", "50%", "0%", "75%", "50%"]}
@@ -35,7 +38,7 @@ const AboutMe: NextPage = () => {
                 </h3>
 
                 
-            </div>
+            </div> */}
         </div>
     )
 }

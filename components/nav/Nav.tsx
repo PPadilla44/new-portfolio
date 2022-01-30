@@ -4,7 +4,7 @@ import Logo from '../logo/Logo';
 
 export const Nav = () => {
     return (
-        <nav className='h-16 w-full bg-light absolute left-0 top-0 flex justify-center z-50'>
+        <nav className='h-24 w-full absolute left-0 top-0 flex justify-center items-center z-50 '>
             <div className="w-[1200px] flex justify-between item">
                 <div className='mt-5'>
                     <Link href={"/"} scroll={false} passHref>

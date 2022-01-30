@@ -8,6 +8,14 @@
     }
 }
 
+.home {
+    background-image: url("../public/assets/pictures/temp.jpeg");
+    background-color: #cccccc; 
+    background-repeat: no-repeat; 
+    background-position: 50% 20%;
+    background-size: cover;
+}
+
 .window {
     width: 480px;
     height: 360px;
@@ -20,7 +28,7 @@
     display: flex;
     flex-direction: column;
 }
-
+/* 
 nav {
     background: #fdfdfd;
     padding: 5px 5px 0;
@@ -29,7 +37,7 @@ nav {
     border-bottom-right-radius: 0;
     border-bottom: 1px solid #eeeeee;
     height: 44px;
-}
+} */
 
 .tabs {
     flex-grow: 1;

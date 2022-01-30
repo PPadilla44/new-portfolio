@@ -15,7 +15,7 @@ class MyDocument extends Document {
 
                     <link href="https://fonts.googleapis.com/css2?family=Artifika&display=swap" rel="stylesheet" />
                 </Head>
-                <body className='flex flex-col bg-main'>
+                <body className='flex flex-col'>
                     <Main />
                     <NextScript />
                     <footer className='mt-auto'>

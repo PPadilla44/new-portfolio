@@ -33,7 +33,6 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           animate="pageAnimate"
           exit={"exit"}
           variants={pageAnimations}
-          className='bg-main'
         >
           <Component {...pageProps} />
         </motion.div>

@@ -10,10 +10,11 @@ interface Props {
     rotateRange: number[];
     size: number;
     src: string | StaticImageData;
-    className?: string | undefined
+    className?: string | undefined;
+    onClick?:  React.MouseEventHandler<HTMLDivElement> | undefined
 }
 
-const RotatingImage: React.FC<Props> = ({ time, xRange, yRange, rotateRange, size, src, className }) => {
+const RotatingImage: React.FC<Props> = ({ time, xRange, yRange, rotateRange, size, src, className, onClick }) => {
 
 
     const variants: Variants = {
@@ -48,7 +49,7 @@ const RotatingImage: React.FC<Props> = ({ time, xRange, yRange, rotateRange, siz
 
 
     return (
-        <div className={`${className} absolute `}>
+        <div className={`${className} absolute `} onClick={onClick}>
 
             <motion.div
                 className="drop-shadow-3xl w-fit"

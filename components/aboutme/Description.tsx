@@ -3,51 +3,49 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { initialTabs as tabs } from "./Items";
 import RotatingImage from "../rotating-images/RotatingImage";
-import anime from "../../public/assets/pictures/anime.jpg"
+import SelectedItem from "./SelectedItem";
+
 
 const Description = () => {
 
 
-    const [selectedTab, setSelectedTab] = useState(tabs[0]);
+    const [selectedTab, setSelectedTab] = useState(null);
+
 
     return (
-        <div className="window">
-            <nav>
-                <ul>
-                    {tabs.map((item) => (
-                        <li
-                            key={item.label}
-                            className={item === selectedTab ? "selected" : ""}
-                            onClick={() => setSelectedTab(item)}
-                        >
-                            {`${item.icon} ${item.label}`}
-                            {item === selectedTab ? (
-                                <RotatingImage
-                                    xRange={["50%", "100%", "50%", "0%", "75%", "50%"]}
-                                    yRange={["50%", "25%", "100%", "75%", "100%", "50%"]}
-                                    size={150}
-                                    time={15}
-                                    rotateRange={[0, 145, 35, 0]}
-                                    src={anime}
-                                    className={`h-[300px] w-[300px] left-10 cursor-pointer`} />
-                            ) : null}
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-            <main>
-                <AnimatePresence exitBeforeEnter>
-                    <motion.div
-                        key={selectedTab ? selectedTab.label : "empty"}
-                        animate={{ opacity: 1, y: 0 }}
-                        initial={{ opacity: 0, y: 20 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        transition={{ duration: 0.15 }}
-                    >
-                        {selectedTab ? selectedTab.icon : "😋"}
-                    </motion.div>
-                </AnimatePresence>
-            </main>
+        <div className="w-[1200px] flex flex-col justify-center items-center">
+            {tabs.map((item, i) => (
+
+
+                <RotatingImage
+                    key={`rot-${i}`}
+                    className={`${item === selectedTab ? "hidden" : ""} ${item.className}`}
+                    onClick={() => setSelectedTab(item)}
+                    xRange={item.xRange}
+                    yRange={item.yRange}
+                    rotateRange={item.rotateRange}
+                    size={item.size}
+                    time={item.time}
+                    src={item.src}
+                />
+
+
+            ))}
+            <AnimatePresence exitBeforeEnter>
+                <motion.div
+                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 5, delay: 1 }}
+                    className="flex justify-center items-center flex-col"
+                >
+                    {selectedTab && <>
+                        <SelectedItem src={selectedTab.src} />
+
+                    </>
+                    }
+                </motion.div>
+            </AnimatePresence>
         </div>
     );
 }

@@ -6,10 +6,10 @@ import { Nav } from '../components/nav/Nav';
 const pageAnimations: Variants = {
   
   pageInitial: {
-    x: "100vw"
+    opacity: 0
   },
   pageAnimate: {
-    x: 0,
+    opacity: 1,
     transition : {
       type: "spring",
       delay: 0.5
@@ -17,6 +17,7 @@ const pageAnimations: Variants = {
   },
   exit: {
     x: "-100vw",
+    opacity: 0,
     transition: { ease: "easeInOut" }
   }
 }

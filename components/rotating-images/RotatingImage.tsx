@@ -42,7 +42,7 @@ const RotatingImage: React.FC<Props> = ({ time, xRange, yRange, rotateRange, siz
             }
 
         },
-        
+
     }
 
 

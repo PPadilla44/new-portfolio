@@ -1,9 +1,9 @@
 import React from 'react';
-import { motion, Variants } from 'framer-motion';
+import { AnimatePresence, motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 
 
-interface Props {
+export interface RotateInterface {
     time: number;
     xRange: string[];
     yRange: string[];
@@ -11,16 +11,16 @@ interface Props {
     size: number;
     src: string | StaticImageData;
     className?: string | undefined;
-    onClick?:  React.MouseEventHandler<HTMLDivElement> | undefined
+    onClick?: React.MouseEventHandler<HTMLDivElement> | undefined;
+    key: string;
 }
 
-const RotatingImage: React.FC<Props> = ({ time, xRange, yRange, rotateRange, size, src, className, onClick }) => {
+const RotatingImage: React.FC<RotateInterface> = ({ time, xRange, yRange, rotateRange, size, src, className, onClick }) => {
 
 
     const variants: Variants = {
 
         float: {
-
             x: xRange,
             y: yRange,
             rotate: rotateRange,
@@ -29,10 +29,9 @@ const RotatingImage: React.FC<Props> = ({ time, xRange, yRange, rotateRange, siz
                 repeat: Infinity,
                 repeatType: 'loop',
             }
-
         },
-        hover: {
 
+        hover: {
             scale: [1, 1.8, 1.4],
             rotate: [null, 0],
             x: [null, "50%"],
@@ -41,26 +40,32 @@ const RotatingImage: React.FC<Props> = ({ time, xRange, yRange, rotateRange, siz
                 type: "spring",
                 duration: 1,
             }
-
         },
+
+        tap: {
+            scale: 0,
+        }
 
     }
 
 
 
     return (
-        <div className={`${className} absolute `} onClick={onClick}>
+        <div className={`${className} absolute`} onClick={onClick}>
 
-            <motion.div
-                className="drop-shadow-3xl w-fit"
-                variants={variants}
-                animate={"float"}
-                whileHover={"hover"}
-            >
 
-                <Image className='rounded-lg' src={src} alt={"anime"} objectFit='cover' width={"150px"} height={"150px"} />
+                <motion.div
+                    className="drop-shadow-3xl w-fit"
+                    initial={{ scale: 1 }}
+                    variants={variants}
+                    animate={"float"}
+                    whileHover={"hover"}
+                    whileTap={"tap"}
+                >
 
-            </motion.div>
+                    <Image className='rounded-lg' src={src} alt={"anime"} objectFit='cover' objectPosition="center" width={"150px"} height={"150px"} />
+
+                </motion.div>
 
         </div >
     );

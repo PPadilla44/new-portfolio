@@ -1,25 +1,25 @@
 import * as React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { initialTabs as tabs } from "./Items";
-import RotatingImage from "../rotating-images/RotatingImage";
+import { allImages } from "./Items";
+import RotatingImage, { RotateInterface } from "../rotating-images/RotatingImage";
 import SelectedItem from "./SelectedItem";
 
 
 const Description = () => {
 
 
-    const [selectedTab, setSelectedTab] = useState(null);
+    const [selectedTab, setSelectedTab] = useState<RotateInterface | null>(allImages[0]);
 
 
     return (
         <div className="w-[1200px] flex flex-col justify-center items-center">
-            {tabs.map((item, i) => (
+            {allImages.map((item, i) => (
 
 
                 <RotatingImage
                     key={`rot-${i}`}
-                    className={`${item === selectedTab ? "hidden" : ""} ${item.className}`}
+                    className={`${item.className}`}
                     onClick={() => setSelectedTab(item)}
                     xRange={item.xRange}
                     yRange={item.yRange}
@@ -33,17 +33,14 @@ const Description = () => {
             ))}
             <AnimatePresence exitBeforeEnter>
                 <motion.div
-                    animate={{ opacity: 1, y: 0 }}
-                    initial={{ opacity: 0, y: 20 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 5, delay: 1 }}
+                    key={selectedTab ? selectedTab.className : "empty"}
+                    animate={{ opacity: 1, scale: 1}}
+                    initial={{ opacity: 0, scale: 0 }}
+                    exit={{ opacity: 0, scale: 5 }}
+                    transition={{ duration: 0.50, type:"spring", delay: .15 }}
                     className="flex justify-center items-center flex-col"
                 >
-                    {selectedTab && <>
-                        <SelectedItem src={selectedTab.src} />
-
-                    </>
-                    }
+                    {selectedTab && <SelectedItem src={selectedTab.src} />}
                 </motion.div>
             </AnimatePresence>
         </div>

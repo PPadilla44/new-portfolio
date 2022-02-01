@@ -4,19 +4,18 @@ import { motion, Variants, AnimatePresence } from "framer-motion";
 import { Nav } from '../components/nav/Nav';
 
 const pageAnimations: Variants = {
-  
+
   pageInitial: {
     opacity: 0
   },
   pageAnimate: {
     opacity: 1,
-    transition : {
+    transition: {
       type: "spring",
       delay: 0.5
     }
   },
   exit: {
-    x: "-100vw",
     opacity: 0,
     transition: { ease: "easeInOut" }
   }
@@ -24,7 +23,8 @@ const pageAnimations: Variants = {
 
 function MyApp({ Component, pageProps, router }: AppProps) {
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden bg-main'>
+
       <Nav />
 
       <AnimatePresence>

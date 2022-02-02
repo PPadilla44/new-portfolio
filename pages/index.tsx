@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         <footer className='bottom-6 absolute'>
           <div className='flex gap-10'>
 
-            <a href="https://github.com/PPadilla44" target="_blank">
+            <a href="https://github.com/PPadilla44" target="_blank" rel="noreferrer">
 
               <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_72_39)">
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
 
             </a>
 
-            <a href="https://www.linkedin.com/in/pablo-padilla-6861b5137/" target="_blank">
+            <a href="https://www.linkedin.com/in/pablo-padilla-6861b5137/" target="_blank" rel="noreferrer">
 
             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0_72_45)">

@@ -27,7 +27,7 @@ export const allImages: AboutMeItem[] = [
             time: 18,
             rotateRange: [0, -45, 135, 0],
             src: ME,
-            className: `right-0 top-0 h-[300px] w-[300px] cursor-pointer`,
+            className: `right-0 top-0 h-[300px] w-[300px]`,
             key: "rot-1"
         },
     },
@@ -43,7 +43,7 @@ export const allImages: AboutMeItem[] = [
             time: 15,
             rotateRange: [0, 15, 305, 0],
             src: grad,
-            className: `left-0 bottom-0  h-[300px] w-[300px] cursor-pointer`,
+            className: `left-0 bottom-0  h-[300px] w-[300px]`,
             key: "rot-2",
         }
     },
@@ -59,7 +59,7 @@ export const allImages: AboutMeItem[] = [
             time: 16,
             rotateRange: [0, -75, -55, 0],
             src: esacpe,
-            className: `top-0 left-0 h-[300px] w-[300px] cursor-pointer`,
+            className: `top-0 left-0 h-[300px] w-[300px]`,
             key: "rot-4",
         }
     },
@@ -75,7 +75,7 @@ export const allImages: AboutMeItem[] = [
             time: 24,
             rotateRange: [0, 145, 35, 0],
             src: anime,
-            className: `left-0 h-[300px] w-[300px] cursor-pointer`,
+            className: `left-0 h-[300px] w-[300px]`,
             key: "rot-5",
         },
     },
@@ -91,7 +91,7 @@ export const allImages: AboutMeItem[] = [
             time: 20,
             rotateRange: [0, -145, 35, 0],
             src: marathon,
-            className: `bottom-0 right-0 h-[300px] w-[300px] cursor-pointer`,
+            className: `bottom-0 right-0 h-[300px] w-[300px]`,
             key: "rot-6",
         }
     },
@@ -107,7 +107,7 @@ export const allImages: AboutMeItem[] = [
             time: 15,
             rotateRange: [0, 145, 35, 0],
             src: snow,
-            className: `right-0 h-[300px] w-[300px] cursor-pointer`,
+            className: `right-0 h-[300px] w-[300px]`,
             key: "rot-7",
         }
     },

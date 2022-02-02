@@ -22,10 +22,11 @@ const pageAnimations: Variants = {
 }
 
 function MyApp({ Component, pageProps, router }: AppProps) {
+
   return (
     <div className='overflow-hidden bg-main'>
 
-      <Nav />
+      <Nav page={router.route} />
 
       <AnimatePresence>
         <motion.div

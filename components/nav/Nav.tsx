@@ -32,11 +32,9 @@ export const Nav: React.FC<Props> = ({ page }) => {
                     {
                         pages.map((item, i) => {
                             return (
-                                <button key={`nav-${i}`}>
-                                    <Link href={item.page} scroll={false} passHref>
-                                        <h3 className={`${page === item.page && "text-light underline"}`}>{item.title}</h3>
+                                    <Link href={item.page} scroll={false} passHref key={`nav-${i}`}>
+                                        <p className={`${page === item.page && "text-light underline"} cursor-pointer`}>{item.title}</p>
                                     </Link>
-                                </button>
 
                             )
                         })

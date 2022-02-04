@@ -6,11 +6,34 @@
     h1, h2, h3, h4, h5, p {
         @apply font-artifika
     }
+
+    .home {
+        @apply bg-no-repeat
+    }
+
 }
 
 .home {
     background-image: url("../public/assets/pictures/hero.png");
-    background-repeat: no-repeat; 
-    background-position: center 10%;
-    background-size: cover;
+    /* background-position: center 10%; */
+    
+}
+
+@media (min-width: 1536px) {
+    .home {
+        background-size: cover;
+        background-position: center top;
+    }
+}
+
+@media (min-width: 1280px) {
+    .home {
+        background-size: cover;
+        background-position: center top;
+    }
+}
+
+@media (min-width: 1024px) {
+    .home {
+    }
 }

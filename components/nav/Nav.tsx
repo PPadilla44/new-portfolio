@@ -18,17 +18,17 @@ export const Nav: React.FC<Props> = ({ page }) => {
 
     return (
         <nav className='h-24 w-full absolute left-0 top-0 flex justify-center items-center z-50'>
-            <div className='absolute left-0'>
+            <div className='absolute hidden left-0 lg:block'>
                 <Link href={"/"} scroll={false} passHref>
                     <button className='w-fit'>
                         <Logo />
                     </button>
                 </Link>
             </div>
-            <div className="w-[1200px] flex justify-center items-center relative">
+            <div className="w-full px-4 sm:px-6 lg:px-0 lg:w-[1200px] flex justify-center items-center relative">
 
 
-                <div className='flex items-center justify-between text-2xl text-grey w-[600px]'>
+                <div className='flex items-center justify-between text-sm sm:text-2xl text-grey w-full lg:w-[800px]'>
 
                     {
                         pages.map((item, i) => {

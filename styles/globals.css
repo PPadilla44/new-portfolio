@@ -8,32 +8,14 @@
     }
 
     .home {
-        @apply bg-no-repeat
+        @apply bg-no-repeat bg-[length:1200px] sm:bg-[length:2000px] 2xl:bg-cover
+        h-screen w-screen overflow-hidden relative pt-[80px] sm:pt-[130px] flex justify-center
     }
 
 }
+
 
 .home {
     background-image: url("../public/assets/pictures/hero.png");
-    /* background-position: center 10%; */
-    
-}
-
-@media (min-width: 1536px) {
-    .home {
-        background-size: cover;
-        background-position: center top;
-    }
-}
-
-@media (min-width: 1280px) {
-    .home {
-        background-size: cover;
-        background-position: center top;
-    }
-}
-
-@media (min-width: 1024px) {
-    .home {
-    }
+    background-position: center 20%;
 }

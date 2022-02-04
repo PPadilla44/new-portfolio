@@ -24,7 +24,7 @@ const pageAnimations: Variants = {
 function MyApp({ Component, pageProps, router }: AppProps) {
 
   return (
-    <div className='overflow-hidden bg-main'>
+    <div className='overflow-hidden bg-main relative'>
 
       <Nav page={router.route} />
 

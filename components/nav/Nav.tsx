@@ -1,20 +1,13 @@
 import Link from 'next/link';
 import React from 'react';
 import Logo from '../logo/Logo';
+import { Pages } from "../index"
 
 interface Props {
     page: string;
 }
 
 export const Nav: React.FC<Props> = ({ page }) => {
-
-    const pages = [
-        { page: "/", title: "Home" },
-        { page: "/aboutme", title: "About Me" },
-        { page: "/projects", title: "Projects" },
-        { page: "/skills", title: "Skills" },
-        { page: "/education", title: "Education" }
-    ]
 
     return (
         <nav className='hidden h-24 w-full absolute left-0 top-0 sm:flex justify-center items-center z-50'>
@@ -31,7 +24,7 @@ export const Nav: React.FC<Props> = ({ page }) => {
                 <div className='flex items-center justify-between text-sm sm:text-2xl text-grey w-full lg:w-[800px]'>
 
                     {
-                        pages.map((item, i) => {
+                        Pages.map((item, i) => {
                             return (
                                 <Link href={item.page} scroll={false} passHref key={`nav-${i}`}>
                                     <p className={`${page === item.page && "text-light underline"} cursor-pointer`}>{item.title}</p>

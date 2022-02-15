@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { motion, Variants, AnimatePresence } from "framer-motion";
+import { motion, Variants, AnimatePresence, useCycle } from "framer-motion";
 import { Nav } from '../components/nav/Nav';
 import { NavMobile } from '../components/nav/NavMobile';
 
@@ -24,11 +24,14 @@ const pageAnimations: Variants = {
 
 function MyApp({ Component, pageProps, router }: AppProps) {
 
+  const [isOpen, toggleOpen] = useCycle(false, true);
+
+
   return (
     <div className='overflow-hidden bg-main relative'>
 
-      <NavMobile />
-      <Nav page={router.route} />
+      <NavMobile page={router.route} isOpen={isOpen} toggleOpen={() => toggleOpen()} />
+      <Nav page={router.route}/>
 
       <AnimatePresence>
         <motion.div
@@ -38,7 +41,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
           exit={"exit"}
           variants={pageAnimations}
         >
-          <Component {...pageProps} />
+          <Component {...pageProps} isOpen={isOpen} />
         </motion.div>
       </AnimatePresence>
     </div>

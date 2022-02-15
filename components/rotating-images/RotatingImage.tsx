@@ -61,9 +61,10 @@ const RotatingImage: React.FC<RotateInterface> = ({ time, xRange, yRange, rotate
                     animate={"float"}
                     whileHover={"hover"}
                     whileTap={"tap"}
+                    onClick={onClick} 
                 >
 
-                    <Image onClick={onClick} className='rounded-lg cursor-pointer' src={src} alt={"anime"} objectFit='cover' objectPosition="center" width={"150px"} height={"150px"} />
+                    <Image className='rounded-lg cursor-pointer' src={src} alt={"anime"} objectFit='cover' objectPosition="center" width={"150px"} height={"150px"} />
 
                 </motion.div>
 

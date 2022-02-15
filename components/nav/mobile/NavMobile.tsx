@@ -1,7 +1,7 @@
 import { motion, useCycle } from 'framer-motion'
 import Link from 'next/link';
 import React, { useRef } from 'react'
-import Logo from '../logo/Logo'
+import Logo from '../../logo/Logo'
 import { MenuToggle } from './MenuToggle';
 import { Navigation } from './Navigation';
 
@@ -42,7 +42,7 @@ export const NavMobile: React.FC<Props> = ({ page, isOpen, toggleOpen }) => {
             initial={false}
             animate={isOpen ? "open" : "closed"}
             ref={containerRef}
-            className='sm:hidden h-14 w-full absolute left-0 top-0 flex z-50 items-center bg-darkish'
+            className='sm:hidden h-14 w-full absolute left-0 top-0 flex z-50 items-center '
         >
 
             <div className="w-full px-4 flex justify-between items-center">

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 import { MenuItem } from "./MenuItem";
-import { Pages } from "../index"
+import { Pages } from "../../index"
 
 const variants = {
     open: {

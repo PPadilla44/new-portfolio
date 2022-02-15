@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { motion, Variants, AnimatePresence, useCycle } from "framer-motion";
 import { Nav } from '../components/nav/Nav';
-import { NavMobile } from '../components/nav/NavMobile';
+import { NavMobile } from '../components/nav/mobile/NavMobile';
 
 const pageAnimations: Variants = {
 

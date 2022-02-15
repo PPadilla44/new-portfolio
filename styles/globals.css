@@ -9,7 +9,7 @@
 
     .home {
         @apply bg-no-repeat bg-[length:1200px] sm:bg-[length:2000px] 2xl:bg-cover
-        h-screen w-screen overflow-hidden relative pt-[80px] sm:pt-[130px] flex justify-center
+        h-screen w-screen overflow-hidden relative pt-16 sm:pt-[130px] flex justify-center
     }
 
 }

@@ -17,7 +17,7 @@ export const Nav: React.FC<Props> = ({ page }) => {
     ]
 
     return (
-        <nav className='h-24 w-full absolute left-0 top-0 flex justify-center items-center z-50'>
+        <nav className='hidden h-24 w-full absolute left-0 top-0 sm:flex justify-center items-center z-50'>
             <div className='absolute hidden left-0 lg:block'>
                 <Link href={"/"} scroll={false} passHref>
                     <button className='w-fit'>

@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { motion, Variants, AnimatePresence } from "framer-motion";
 import { Nav } from '../components/nav/Nav';
+import { NavMobile } from '../components/nav/NavMobile';
 
 const pageAnimations: Variants = {
 
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <div className='overflow-hidden bg-main relative'>
 
+      <NavMobile />
       <Nav page={router.route} />
 
       <AnimatePresence>

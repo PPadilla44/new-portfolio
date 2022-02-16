@@ -36,27 +36,33 @@ export const NavMobile: React.FC<Props> = ({ page, isOpen, toggleOpen }) => {
 
     const containerRef = useRef(null);
 
+    const handleLogoClick = () => {
+        if (isOpen) {
+            toggleOpen();
+        }
+    }
 
     return (
         <motion.nav
             initial={false}
             animate={isOpen ? "open" : "closed"}
             ref={containerRef}
-            className='sm:hidden h-14 w-full absolute left-0 top-0 flex z-50 items-center '
+            className='lg:hidden h-14 w-full absolute left-0 top-0 flex z-50 items-center bg-darkish'
         >
 
             <div className="w-full px-4 flex justify-between items-center">
 
                 <Link href={"/"} scroll={false} passHref>
-                    <button className='w-fit z-50' onClick={toggleOpen}>
+                    <button className='w-fit z-50' onClick={handleLogoClick}>
 
-                    <Logo size='small' />
+                        <Logo size='small' />
                     </button>
                 </Link>
 
                 <motion.div className='absolute top-0 px-4 left-0 w-screen bg-darkish' variants={navbar}>
                     <div className='flex justify-start pt-28'>
                         <Navigation page={page} toggle={toggleOpen} />
+                        
                     </div>
                 </motion.div>
                 <MenuToggle toggle={toggleOpen} />

@@ -12,10 +12,11 @@ const variants = {
     }
 };
 
-export const Navigation:React.FC<{page: string, toggle: any}> = ({page, toggle}) => (
+export const Navigation: React.FC<{ page: string, toggle: any }> = ({ page, toggle }) => (
     <motion.ul variants={variants} className="flex flex-col gap-9">
-        {Pages.map((item,i) => (
-            <MenuItem i={i} key={i} item={item} page={page} toggle={toggle}/>
+        {Pages.map((item, i) => (
+            <MenuItem i={i} key={i} item={item} page={page} toggle={toggle} />
         ))}
+        <MenuItem i={10} toggle={toggle}/>
     </motion.ul>
 );

@@ -25,25 +25,30 @@ export const MenuItem: React.FC<{ i: number, item?: any, page?: string, toggle: 
 
 
     return (
-        <motion.li
-            variants={variants}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={toggle}
-            className="text-grey "
-        >
-            {
-                item ?
 
-                    <Link href={item.page} scroll={false} passHref key={`nav-${i}`}>
-                        <p className={`${page === item.page && "text-light underline"} cursor-pointer text-4xl `}>{item.title}</p>
-                    </Link>
+        item ?
 
-                    :
-                    
-                    <Footer dark={false} />
+            <motion.li
+                variants={variants}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => toggle(false)}
+                className="text-grey "
+            >
+                <Link href={item.page} scroll={false} passHref key={`nav-${i}`}>
+                    <p className={`${page === item.page && "text-light underline"} cursor-pointer text-4xl `}>{item.title}</p>
+                </Link>
 
-            }
-        </motion.li>
+            </motion.li>
+            :
+            <motion.li
+                variants={variants}
+                onClick={toggle}
+                className="text-grey"
+            >
+                <Footer dark={false} />
+            </motion.li>
+
+
     );
 };

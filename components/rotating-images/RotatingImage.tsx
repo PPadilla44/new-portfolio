@@ -51,8 +51,7 @@ const RotatingImage: React.FC<RotateInterface> = ({ time, xRange, yRange, rotate
 
 
     return (
-        <div className={`${className} absolute`} >
-
+        <div className={`${className} absolute`}  onClick={onClick}>
 
                 <motion.div
                     className="drop-shadow-3xl w-fit"
@@ -61,7 +60,6 @@ const RotatingImage: React.FC<RotateInterface> = ({ time, xRange, yRange, rotate
                     animate={"float"}
                     whileHover={"hover"}
                     whileTap={"tap"}
-                    onClick={onClick} 
                 >
 
                     <Image className='rounded-lg cursor-pointer' src={src} alt={"anime"} objectFit='cover' objectPosition="center" width={"150px"} height={"150px"} />

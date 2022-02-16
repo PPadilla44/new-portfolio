@@ -1,4 +1,4 @@
-import { motion, useCycle } from 'framer-motion'
+import { motion, useCycle, Variants } from 'framer-motion'
 import Link from 'next/link';
 import React, { useRef } from 'react'
 import Logo from '../../logo/Logo'
@@ -12,7 +12,7 @@ interface Props {
 }
 
 
-const navbar = {
+const navbar: Variants = {
     open: {
         height: "100vh",
         transition: {
@@ -28,7 +28,7 @@ const navbar = {
             type: "spring",
             stiffness: 400,
             damping: 40
-        }
+        },
     }
 };
 
@@ -38,7 +38,7 @@ export const NavMobile: React.FC<Props> = ({ page, isOpen, toggleOpen }) => {
 
     const handleLogoClick = () => {
         if (isOpen) {
-            toggleOpen();
+            toggleOpen(0);
         }
     }
 
@@ -54,15 +54,13 @@ export const NavMobile: React.FC<Props> = ({ page, isOpen, toggleOpen }) => {
 
                 <Link href={"/"} scroll={false} passHref>
                     <button className='w-fit z-50' onClick={handleLogoClick}>
-
                         <Logo size='small' />
                     </button>
                 </Link>
 
-                <motion.div className='absolute top-0 px-4 left-0 w-screen bg-darkish' variants={navbar}>
-                    <div className='flex justify-start pt-28'>
-                        <Navigation page={page} toggle={toggleOpen} />
-                        
+                <motion.div className='absolute top-0 px-4 left-0 w-screen bg-darkish overflow-hidden' variants={navbar}>
+                    <div className='flex justify-start pt-28 '>
+                        <Navigation page={page} toggle={() => toggleOpen(0)} />
                     </div>
                 </motion.div>
                 <MenuToggle toggle={toggleOpen} />

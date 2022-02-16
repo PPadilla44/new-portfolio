@@ -1,13 +1,17 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 
-export const Footer:React.FC<{dark?:boolean}> = ({ dark=true }) => {
-    
+export const Footer: React.FC<{ dark?: boolean }> = ({ dark = true }) => {
+
     return (
         <footer className={`h-full  flex pb-3 items-end`}>
 
             <div className={`flex gap-10  `}>
 
-                <a href="https://github.com/PPadilla44" target="_blank" rel="noreferrer">
+                <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="https://github.com/PPadilla44" target="_blank" rel="noreferrer">
 
                     <svg className={`w-14 h-14 ${dark ? "fill-darkish" : "fill-grey"}`} viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_72_39)">
@@ -20,9 +24,12 @@ export const Footer:React.FC<{dark?:boolean}> = ({ dark=true }) => {
                         </defs>
                     </svg>
 
-                </a>
+                </motion.a>
 
-                <a href="https://www.linkedin.com/in/pablo-padilla-6861b5137/" target="_blank" rel="noreferrer">
+                <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                    href="https://www.linkedin.com/in/pablo-padilla-6861b5137/" target="_blank" rel="noreferrer">
 
                     <svg className={`w-14 h-14 ${dark ? "fill-darkish" : "fill-grey"}`} viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
                         <g clipPath="url(#clip0_72_45)">
@@ -35,7 +42,7 @@ export const Footer:React.FC<{dark?:boolean}> = ({ dark=true }) => {
                         </defs>
                     </svg>
 
-                </a>
+                </motion.a>
 
             </div>
 

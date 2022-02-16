@@ -7,7 +7,7 @@ import { NavMobile } from '../components/nav/mobile/NavMobile';
 const pageAnimations: Variants = {
 
   pageInitial: {
-    opacity: 0
+    // opacity: 0,
   },
   pageAnimate: {
     opacity: 1,
@@ -17,7 +17,7 @@ const pageAnimations: Variants = {
     }
   },
   exit: {
-    opacity: 0,
+    // opacity: 0,
     transition: { ease: "easeInOut" }
   }
 }
@@ -30,8 +30,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
   return (
     <div className='overflow-hidden bg-main relative'>
 
-      <NavMobile page={router.route} isOpen={isOpen} toggleOpen={() => toggleOpen()} />
+      <NavMobile page={router.route} isOpen={isOpen} toggleOpen={toggleOpen} />
       <Nav page={router.route}/>
+
 
       <AnimatePresence>
         <motion.div

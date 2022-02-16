@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    h1, h2, h3, h4, h5, p {
+        @apply font-artifika
+    }
+
+    .home {
+        @apply bg-no-repeat bg-[length:1200px] sm:bg-[length:2000px] 2xl:bg-cover
+        h-screen w-screen overflow-hidden relative pt-16 lg:pt-[130px] flex justify-center
+    }
+
+}
+
+
+.home {
+    background-image: url("../public/assets/pictures/hero.png");
+    background-position: center 20%;
+}

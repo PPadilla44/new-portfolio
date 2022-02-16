@@ -6,7 +6,7 @@ import marathon from "../../public/assets/pictures/marathon.jpg";
 import snow from "../../public/assets/pictures/snow.jpg";
 
 
-import { RotateInterface } from "../rotating-images/RotatingImage";
+import { RotateInterface } from "./rotating-images/RotatingImage";
 
 export interface AboutMeItem {
     description: { title: string, paragraph: string }
@@ -18,7 +18,7 @@ export const allImages: AboutMeItem[] = [
         description: {
             title: "This is me!!!",
             paragraph:
-                "This is going to the be paragraph all about me!"
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eleifend nullam nullam blandit sed platea at viverra a, dignissim. Velit nullam viverra erat eget lacus, diam. Orci urna sed leo etiam nibh etiam. Semper sed quis dui enim quisque ac varius venenatis bibendum."
         },
         componentInfo: {
             xRange: ["50%", "0%", "50%", "75%", "100%", "50%"],

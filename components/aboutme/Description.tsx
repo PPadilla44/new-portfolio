@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { allImages } from "./Items";
-import RotatingImage from "../rotating-images/RotatingImage";
+import RotatingImage from "./rotating-images/RotatingImage";
 import { AboutMeItem } from "./Items";
 import SelectedItem from "./SelectedItem";
 
@@ -12,7 +12,7 @@ const Description = () => {
     const [selectedTab, setSelectedTab] = useState<AboutMeItem | null>(allImages[0]);
 
     return (
-        <div className="w-[1200px] flex flex-col justify-center items-center">
+        <div className="w-[1800px] h-5/6 flex flex-col justify-center items-center relative">
             {allImages.map((item, i) => (
 
                 <RotatingImage
@@ -35,7 +35,7 @@ const Description = () => {
                     initial={{ opacity: 0, scale: 0 }}
                     exit={{ opacity: 0, scale: .9 }}
                     transition={{ duration: 0.50, type: "spring" }}
-                    className="flex justify-center items-center flex-col"
+                    className="flex justify-center items-center flex-col max-w-[1200px] text-clip "
                 >
                     {selectedTab &&
                         <SelectedItem

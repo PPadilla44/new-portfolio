@@ -5,7 +5,7 @@ import Description from '../components/aboutme/Description';
 const AboutMe: NextPage = () => {
 
     return (
-        <div className="h-screen w-screen flex justify-center items-center relative bg-main">
+        <div className="h-screen w-screen flex justify-center items-center relative bg-darkish">
 
             <Description />
 

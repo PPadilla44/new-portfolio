@@ -36,6 +36,7 @@ const RotatingImage: React.FC<RotateInterface> = ({ time, xRange, yRange, rotate
             rotate: [null, 0],
             x: [null, "50%"],
             y: [null, "50%"],
+            opacity: 1,
             transition: {
                 type: "spring",
                 duration: 1,
@@ -55,7 +56,7 @@ const RotatingImage: React.FC<RotateInterface> = ({ time, xRange, yRange, rotate
 
                 <motion.div
                     className="drop-shadow-3xl w-fit"
-                    initial={{ scale: 1 }}
+                    initial={{ scale: 1, opacity: 0.5 }}
                     variants={variants}
                     animate={"float"}
                     whileHover={"hover"}

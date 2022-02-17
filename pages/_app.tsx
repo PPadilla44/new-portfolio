@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
 
 
   return (
-    <div className='overflow-hidden bg-main relative'>
+    <div className='overflow-hidden bg-darkish relative'>
 
       <NavMobile page={router.route} isOpen={isOpen} toggleOpen={toggleOpen} />
       <Nav page={router.route}/>

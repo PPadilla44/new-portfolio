@@ -10,7 +10,7 @@ interface Props {
 export const Nav: React.FC<Props> = ({ page }) => {
 
     return (
-        <nav className='hidden h-24 w-full absolute left-0 top-0 lg:flex justify-center items-center z-50'>
+        <nav className='hidden h-24 w-full absolute left-0 top-0 md:flex justify-center items-center z-50'>
             <div className='absolute hidden left-0 lg:block'>
                 <Link href={"/"} scroll={false} passHref>
                     <button className='w-fit'>

@@ -12,7 +12,7 @@ const Description = () => {
     const [selectedTab, setSelectedTab] = useState<AboutMeItem | null>(allImages[0]);
 
     return (
-        <div className="w-[1800px] h-5/6 flex flex-col justify-center items-center relative">
+        <div className="hidden px-4 sm:px-6 lg:px-0 w-full max-w-[1800px] h-full md:flex flex-col justify-center items-center relative">
             {allImages.map((item, i) => (
 
                 <RotatingImage
@@ -35,7 +35,7 @@ const Description = () => {
                     initial={{ opacity: 0, scale: 0 }}
                     exit={{ opacity: 0, scale: .9 }}
                     transition={{ duration: 0.50, type: "spring" }}
-                    className="flex justify-center items-center flex-col max-w-[1200px] text-clip "
+                    className="flex gap-7 items-center flex-col max-w-[1200px] "
                 >
                     {selectedTab &&
                         <SelectedItem

@@ -47,7 +47,7 @@ export const NavMobile: React.FC<Props> = ({ page, isOpen, toggleOpen }) => {
             initial={false}
             animate={isOpen ? "open" : "closed"}
             ref={containerRef}
-            className='lg:hidden h-14 w-full absolute left-0 top-0 flex z-50 items-center bg-darkish'
+            className='md:hidden h-14 w-full absolute left-0 top-0 flex z-50 items-center bg-darkish'
         >
 
             <div className="w-full px-4 flex justify-between items-center">

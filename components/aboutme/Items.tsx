@@ -27,7 +27,7 @@ export const allImages: AboutMeItem[] = [
             time: 18,
             rotateRange: [0, -45, 135, 0],
             src: ME,
-            className: `right-0 top-0 h-[300px] w-[300px]`,
+            className: `right-0 top-12 h-[300px] w-[300px]`,
             key: "rot-1"
         },
     },
@@ -59,7 +59,7 @@ export const allImages: AboutMeItem[] = [
             time: 16,
             rotateRange: [0, -75, -55, 0],
             src: esacpe,
-            className: `top-0 left-0 h-[300px] w-[300px]`,
+            className: `top-12 left-0 h-[300px] w-[300px]`,
             key: "rot-4",
         }
     },
